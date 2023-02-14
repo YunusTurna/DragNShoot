@@ -2,10 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+namespace DragNNShoot{
 public class DragNShoot : MonoBehaviour
 {
     public float power = 10f;
     public Rigidbody2D rb;
+
+    [SerializeField] public  static GameObject ball;
+
+    private Transform originalParent;
 
     public Vector2 minPower , maxpower;
 
@@ -22,6 +28,7 @@ public class DragNShoot : MonoBehaviour
     {
         cam = Camera.main;
         tl = GetComponent<LineTrajectory>();
+        originalParent = transform.parent;
     }
 
     void Update()
@@ -63,15 +70,36 @@ public class DragNShoot : MonoBehaviour
 
    private void OnCollisionEnter2D(Collision2D other)
    {
-    if(other.gameObject.tag == "Ground")
+    if(other.gameObject.tag == "Ground" || other.gameObject.tag == "Platform")
     {
         shoot = true;
+        rb.drag = 0.5F;
+        
 
     }
+
+    if(other.gameObject.tag == "ExtraJump"){
+        rb.velocity = new Vector3(0,0,0);
+        rb.AddForce(new Vector2(0,30) , ForceMode2D.Impulse);
+        rb.drag = 0.5F;
+        
+    }
+    
+
+    
+
+    
    }
+   
+   
+
+   
+
+    
     
 
     
 
 
+}
 }
