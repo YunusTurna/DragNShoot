@@ -10,6 +10,10 @@ public class DragNShoot : MonoBehaviour
     public Rigidbody2D rb;
 
     [SerializeField] private GameObject SpawnNormalPlatform;
+    [SerializeField] private GameObject complexPlatform1;
+    [SerializeField] private GameObject complexPlatform2;
+    [SerializeField] private GameObject instance;
+    
 
     
 
@@ -23,6 +27,7 @@ public class DragNShoot : MonoBehaviour
     Vector3 endPoint;
     Vector3 spawnExtraJumpPlatform;
     Vector3 platformRotation;
+   
     [SerializeField] GameObject ExtraJumpPlatformm;
 
     private bool shoot = true;
@@ -31,13 +36,15 @@ public class DragNShoot : MonoBehaviour
 
     LineTrajectory tl;
 
-    private void Start()
+    private void Awake()
     {
         cam = Camera.main;
         tl = GetComponent<LineTrajectory>();
         originalParent = transform.parent;
         spawnExtraJumpPlatform = new Vector3(ExtraJumpPlatformm.transform.position.x , ExtraJumpPlatformm.transform.position.y + 5f , ExtraJumpPlatformm.transform.position.z);
         platformRotation = new Vector3(0,0,0);
+        
+        
     }
 
     void Update()
@@ -90,7 +97,7 @@ public class DragNShoot : MonoBehaviour
 
    private void OnCollisionEnter2D(Collision2D other)
    {
-    if(other.gameObject.tag == "Ground" || other.gameObject.tag == "Platform")
+    if((other.gameObject.tag == "Ground" || other.gameObject.tag == "Platform") || other.gameObject.tag == "Instance")
     {
         shoot = true;
         rb.drag = 0.5F;
@@ -108,6 +115,7 @@ public class DragNShoot : MonoBehaviour
         
 
     }
+
     
 
     
