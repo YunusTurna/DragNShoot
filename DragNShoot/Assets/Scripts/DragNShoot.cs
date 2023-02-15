@@ -9,7 +9,9 @@ public class DragNShoot : MonoBehaviour
     public float power = 10f;
     public Rigidbody2D rb;
 
-    [SerializeField] public  static GameObject ball;
+    [SerializeField] private GameObject SpawnNormalPlatform;
+
+    
 
     private Transform originalParent;
 
@@ -19,8 +21,13 @@ public class DragNShoot : MonoBehaviour
     Vector2 force;
     Vector3 startPoint;
     Vector3 endPoint;
+    Vector3 spawnExtraJumpPlatform;
+    Vector3 platformRotation;
+    [SerializeField] GameObject ExtraJumpPlatformm;
 
     private bool shoot = true;
+    private bool extraJumped = false;
+    private int extraJumpedCounter = 1;
 
     LineTrajectory tl;
 
@@ -29,11 +36,14 @@ public class DragNShoot : MonoBehaviour
         cam = Camera.main;
         tl = GetComponent<LineTrajectory>();
         originalParent = transform.parent;
+        spawnExtraJumpPlatform = new Vector3(ExtraJumpPlatformm.transform.position.x , ExtraJumpPlatformm.transform.position.y + 5f , ExtraJumpPlatformm.transform.position.z);
+        platformRotation = new Vector3(0,0,0);
     }
 
     void Update()
     {
-        if(shoot == true){
+        if(shoot == true)
+        {
         
         
         if(Input.GetMouseButtonDown(0))
@@ -60,6 +70,16 @@ public class DragNShoot : MonoBehaviour
             shoot = false;
         }
         }
+
+        if(extraJumped == true & rb.velocity.y <= 0)
+        {
+            Instantiate(SpawnNormalPlatform , spawnExtraJumpPlatform , Quaternion.identity );
+            extraJumped = false;
+            extraJumpedCounter = extraJumpedCounter -1;
+
+        }
+
+
       
 
         
@@ -82,7 +102,11 @@ public class DragNShoot : MonoBehaviour
         rb.velocity = new Vector3(0,0,0);
         rb.AddForce(new Vector2(0,30) , ForceMode2D.Impulse);
         rb.drag = 0.5F;
+        if(extraJumpedCounter == 1){
+            extraJumped = true;
+        }
         
+
     }
     
 
