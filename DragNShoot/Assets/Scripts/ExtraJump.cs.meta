@@ -3,7 +3,9 @@ guid: aeef8a0e1dfde0b4d80a923fd5fb15b8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - extraJumpPlatform: {fileID: 62544453001944334, guid: 2b9e16e79233ca54cb03a710fc34cd3f, type: 3}
+  - normalPlatform: {fileID: 5523501785459317534, guid: 3191587919b22bb45b7ff6007b58b23a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

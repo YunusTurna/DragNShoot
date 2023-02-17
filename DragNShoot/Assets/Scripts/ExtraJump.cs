@@ -37,7 +37,9 @@ public class ExtraJump : MonoBehaviour
     {
         
         if(other.gameObject.tag  == "Ball"){
+            normalPlatform.SetActive(false);
             doit = true;
+            
            
         }
         
