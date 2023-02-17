@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class ComplexGenerator : MonoBehaviour
 {
-    public GameObject complex1;
-    Vector3 location;
+    
+    
+    public GameObject instantiator;
+    Vector3 complex1tocomplex2;
     private bool doIt = true;
+    [SerializeField] GameObject[] complexPlatformPrefab;
+    private int random;
+    
+    
+    
+    
+    
+    
 
     void Start()
     {
-      location = new Vector3(0,50.5f,0);
+      complex1tocomplex2 = new Vector3(0,instantiator.transform.position.y + 16.2f,0);
+      random= Random.Range(0 , complexPlatformPrefab.Length);
+      
+         
     }
 
     // Update is called once per frame
@@ -18,9 +31,12 @@ public class ComplexGenerator : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter2D(Collision2D other) {
+    private void OnCollisionEnter2D(Collision2D other){
+        
+
         if(other.gameObject.tag == "Ball" & doIt == true){
-            Instantiate(complex1 , location , Quaternion.identity);
+            
+            Instantiate(complexPlatformPrefab[random] , complex1tocomplex2 , Quaternion.identity);
             doIt = false;
         }
     }

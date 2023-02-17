@@ -140,8 +140,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 5
   rb: {fileID: 6614294209494416297}
+  SpawnNormalPlatform: {fileID: 5523501785459317534, guid: 3191587919b22bb45b7ff6007b58b23a, type: 3}
+  complexPlatform1: {fileID: 6708008883592080493, guid: 17dd5a6e28f36044fb2abfb34071084c, type: 3}
+  complexPlatform2: {fileID: 1449467666672565481, guid: 18e9ee3f3f39fa94fa929231695c4953, type: 3}
+  instance: {fileID: 3322603756019998656, guid: a4b77a9e3718154448ff27691e913626, type: 3}
   minPower: {x: -3, y: -3}
   maxpower: {x: 3, y: 3}
+  ExtraJumpPlatformm: {fileID: 62544453001944334, guid: 2b9e16e79233ca54cb03a710fc34cd3f, type: 3}
 --- !u!120 &6614294209494416342
 LineRenderer:
   m_ObjectHideFlags: 0

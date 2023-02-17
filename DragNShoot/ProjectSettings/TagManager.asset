@@ -12,6 +12,7 @@ TagManager:
   - Instance
   - Complex2
   - Complex1
+  - Counter
   layers:
   - Default
   - TransparentFX
