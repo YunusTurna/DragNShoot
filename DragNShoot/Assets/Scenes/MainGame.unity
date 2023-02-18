@@ -132,11 +132,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 494572425322388121, guid: 17dd5a6e28f36044fb2abfb34071084c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.3
+      value: -10.7
       objectReference: {fileID: 0}
     - target: {fileID: 494572425322388121, guid: 17dd5a6e28f36044fb2abfb34071084c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 37.4
+      value: -5.7
       objectReference: {fileID: 0}
     - target: {fileID: 6708008883592080493, guid: 17dd5a6e28f36044fb2abfb34071084c, type: 3}
       propertyPath: m_Name
@@ -287,24 +287,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 2068542696}
   cams: {fileID: 519420028}
---- !u!1 &726067278 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7715557929510071543, guid: 17dd5a6e28f36044fb2abfb34071084c, type: 3}
-  m_PrefabInstance: {fileID: 471661416}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &726067282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726067278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 787b0adf5d2d2744aa818de611c114fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  complex1: {fileID: 1449467666672565481, guid: 18e9ee3f3f39fa94fa929231695c4953, type: 3}
 --- !u!1 &2068542696 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 494572425322388197, guid: 17dd5a6e28f36044fb2abfb34071084c, type: 3}

@@ -13,6 +13,8 @@ TagManager:
   - Complex2
   - Complex1
   - Counter
+  - Complex4
+  - Complex3
   layers:
   - Default
   - TransparentFX
