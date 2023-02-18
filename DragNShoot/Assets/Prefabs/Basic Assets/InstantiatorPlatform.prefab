@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3322603756019998670}
   - component: {fileID: 3322603756019998657}
   - component: {fileID: 534402182223715730}
+  - component: {fileID: -475848779081469070}
   m_Layer: 0
   m_Name: InstantiatorPlatform
   m_TagString: Instance
@@ -130,6 +131,18 @@ MonoBehaviour:
   - {fileID: 1449467666672565481, guid: 18e9ee3f3f39fa94fa929231695c4953, type: 3}
   - {fileID: 7278858072673500423, guid: 53f94fef2b6f2894a85ccbd81c167be4, type: 3}
   - {fileID: 4079033077068645875, guid: 58d03f4ea1822b04d8c8ddd388a393aa, type: 3}
+--- !u!114 &-475848779081469070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3322603756019998656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b48033dc1ab131548a1392490fc76fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8790526785101413501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1979331549614803482, guid: 7e4a38d39fb32f541bb73ab7b39d53f6, type: 3}
       propertyPath: m_Size.x
-      value: 3.8987045
+      value: 18.452084
       objectReference: {fileID: 0}
     - target: {fileID: 1979331549614803482, guid: 7e4a38d39fb32f541bb73ab7b39d53f6, type: 3}
       propertyPath: m_Size.y
@@ -151,7 +164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1979331549614803482, guid: 7e4a38d39fb32f541bb73ab7b39d53f6, type: 3}
       propertyPath: m_Offset.x
-      value: -0.2860756
+      value: 0.32719803
       objectReference: {fileID: 0}
     - target: {fileID: 1979331549614803482, guid: 7e4a38d39fb32f541bb73ab7b39d53f6, type: 3}
       propertyPath: m_Offset.y

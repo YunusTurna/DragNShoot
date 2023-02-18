@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 175107194575599141}
   - component: {fileID: 175107194575599142}
   - component: {fileID: 175107194575599143}
+  - component: {fileID: -6684708372755088012}
   m_Layer: 0
   m_Name: MovingPlatform
   m_TagString: Platform
@@ -147,6 +148,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839cbda7475591b45b4423492ce362b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6684708372755088012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175107194575599128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b48033dc1ab131548a1392490fc76fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4615256115418082975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -160,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1979331549614803482, guid: 7e4a38d39fb32f541bb73ab7b39d53f6, type: 3}
       propertyPath: m_Size.x
-      value: 5.140687
+      value: 16.236084
       objectReference: {fileID: 0}
     - target: {fileID: 1979331549614803482, guid: 7e4a38d39fb32f541bb73ab7b39d53f6, type: 3}
       propertyPath: m_Size.y
@@ -168,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1979331549614803482, guid: 7e4a38d39fb32f541bb73ab7b39d53f6, type: 3}
       propertyPath: m_Offset.x
-      value: -0.4076457
+      value: 0.32877445
       objectReference: {fileID: 0}
     - target: {fileID: 1979331549614803482, guid: 7e4a38d39fb32f541bb73ab7b39d53f6, type: 3}
       propertyPath: m_Offset.y
