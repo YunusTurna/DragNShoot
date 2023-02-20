@@ -11,15 +11,17 @@ public class DestroyGameObjects : MonoBehaviour
   {
     deadLocation = new Vector3(transform.position.x , transform.position.y + 3 , transform.position.z);
   }
- private void OnCollisionEnter2D(Collision2D other)
- {
-    if(other.gameObject.tag == "Destroyer")
+ 
+ private void OnTriggerEnter2D(Collider2D other)
+{
+  if(other.gameObject.tag == "Destroyer")
     {
             
       Destroy(gameObject);
       Instantiate(dead , deadLocation , Quaternion.identity );
 
     }
+  
  }
     
 

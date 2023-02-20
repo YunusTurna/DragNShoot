@@ -22,6 +22,8 @@ public class DragNShoot : MonoBehaviour
     
 
     private Transform originalParent;
+    private int bekle = 5;
+    private bool bekleCalistir = false;
 
     public Vector2 minPower , maxpower;
 
@@ -37,6 +39,7 @@ public class DragNShoot : MonoBehaviour
     private bool shoot = true;
     private bool extraJumped = false;
     private int extraJumpedCounter = 1;
+    private bool makeItStop = false;
 
     LineTrajectory tl;
 
@@ -89,6 +92,16 @@ public class DragNShoot : MonoBehaviour
             extraJumpedCounter = extraJumpedCounter -1;
 
         }
+        if(makeItStop == true)
+        {
+            StartCoroutine(Wait(bekle));
+            if(bekleCalistir == true)
+            {
+            Debug.Log("Çalışıyor");
+            gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            }
+
+        }
         
 
       
@@ -119,20 +132,21 @@ public class DragNShoot : MonoBehaviour
         if(extraJumpedCounter == 1){
             extraJumped = true;
         }
-        
-
     
-
     }
+    if(other.gameObject.tag == "Dead")
+    {
+       {
+        makeItStop = true;
 
+        }
+   }
+   }
    
-    
-
-    
-
-    
-
-    
+   IEnumerator Wait(int bekle)
+   {
+    yield return new WaitForSeconds(bekle);
+    bekleCalistir = true;
    }
    
    

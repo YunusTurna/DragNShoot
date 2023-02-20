@@ -25,7 +25,7 @@ public class Cam : MonoBehaviour
         if(Dead.makeCameraFreeze == true)
         {
             rb.constraints = RigidbodyConstraints2D.FreezePositionY;
-            Debug.Log("Camera Stop");
+            
         }
     }
 }
