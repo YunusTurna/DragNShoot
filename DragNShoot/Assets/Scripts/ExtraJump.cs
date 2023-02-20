@@ -8,7 +8,7 @@ public class ExtraJump : MonoBehaviour
     [SerializeField] GameObject extraJumpPlatform;
     [SerializeField] GameObject normalPlatform;
     private bool doit = false;
-    private int once = 1;
+    
     
     Vector3 location;
 
