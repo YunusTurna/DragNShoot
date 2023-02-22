@@ -21,6 +21,10 @@ public class DestroyGameObjects : MonoBehaviour
       Instantiate(dead , deadLocation , Quaternion.identity );
 
     }
+
+  if(other.gameObject.tag == "Dead"){
+    Destroy(gameObject);
+  }
   
  }
     
