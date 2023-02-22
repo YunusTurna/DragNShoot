@@ -16,6 +16,7 @@ public class DragNShoot : MonoBehaviour
     [SerializeField] private GameObject complexPlatform1;
     [SerializeField] private GameObject complexPlatform2;
     [SerializeField] private GameObject instance;
+    [SerializeField] private GameObject button;
     
     
 
@@ -138,6 +139,7 @@ public class DragNShoot : MonoBehaviour
     {
        {
         makeItStop = true;
+        button.SetActive(true);
 
         }
    }
