@@ -16,7 +16,7 @@ public class DragNShoot : MonoBehaviour
     [SerializeField] private GameObject complexPlatform1;
     [SerializeField] private GameObject complexPlatform2;
     [SerializeField] private GameObject instance;
-    [SerializeField] private GameObject button;
+    
     
     
 
@@ -24,7 +24,10 @@ public class DragNShoot : MonoBehaviour
 
     private Transform originalParent;
     private int bekle = 5;
+    private int deadBekle = 2;
     private bool bekleCalistir = false;
+    private bool deadScene = false;
+    private bool deadSceneCalistir = false;
 
     public Vector2 minPower , maxpower;
 
@@ -103,6 +106,12 @@ public class DragNShoot : MonoBehaviour
             }
 
         }
+        if(deadScene == true){
+            StartCoroutine(WaitDead(deadBekle));
+            if(deadSceneCalistir == true){
+                SceneManager.LoadScene("RealDeadScene");
+            }
+        }
         
 
       
@@ -139,9 +148,11 @@ public class DragNShoot : MonoBehaviour
     {
        {
         makeItStop = true;
-        button.SetActive(true);
+        deadScene = true;
+        
+        
 
-        }
+       }
    }
    }
    
@@ -150,6 +161,14 @@ public class DragNShoot : MonoBehaviour
     yield return new WaitForSeconds(bekle);
     bekleCalistir = true;
    }
+   IEnumerator WaitDead(int deadBekle)
+   {
+    yield return new WaitForSeconds(deadBekle);
+    deadSceneCalistir = true;
+    
+   }
+   
+
    
    
 

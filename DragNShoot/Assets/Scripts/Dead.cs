@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Dead : MonoBehaviour
 {
     public static bool makeCameraFreeze = false;
-    private int bekle = 2;
+    
     private bool startC = false;
     public static bool buttonDisplay = false;
     

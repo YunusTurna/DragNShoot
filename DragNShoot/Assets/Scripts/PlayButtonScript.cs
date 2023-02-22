@@ -10,12 +10,12 @@ public class PlayButtonScript : MonoBehaviour
 
     void Awake()
     {
-        gameObject.SetActive(false);
+       
     }
     void Start()
     {
 
-        GameObject.Find("PlayButton").GetComponentInChildren<Text>().text = "Play";
+     
     }
 
     // Update is called once per frame
@@ -33,5 +33,12 @@ public class PlayButtonScript : MonoBehaviour
         Dead.makeCameraFreeze = false;
         Counter.score = 0;
 
+    }
+    public void CreditsButton(){
+        SceneManager.LoadScene("Credits");
+    }
+    public void BackButton()
+    {
+        SceneManager.LoadScene("DeadScene");
     }
 }

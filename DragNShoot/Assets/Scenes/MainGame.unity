@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 498839842, guid: 50d0418a4157e12498f1c08810938e81, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 419
+      objectReference: {fileID: 0}
+    - target: {fileID: 498839842, guid: 50d0418a4157e12498f1c08810938e81, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 440
+      objectReference: {fileID: 0}
     - target: {fileID: 4766555580683334920, guid: 50d0418a4157e12498f1c08810938e81, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -246,7 +254,7 @@ PrefabInstance:
     - target: {fileID: 494572425322388120, guid: 17dd5a6e28f36044fb2abfb34071084c, type: 3}
       propertyPath: button
       value: 
-      objectReference: {fileID: 1813484128}
+      objectReference: {fileID: 0}
     - target: {fileID: 6708008883592080493, guid: 17dd5a6e28f36044fb2abfb34071084c, type: 3}
       propertyPath: m_Name
       value: ComplexPlatform1
@@ -486,11 +494,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &1813484128 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8475085214664220061, guid: 50d0418a4157e12498f1c08810938e81, type: 3}
-  m_PrefabInstance: {fileID: 67590968}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2068542696 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 494572425322388197, guid: 17dd5a6e28f36044fb2abfb34071084c, type: 3}
