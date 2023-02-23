@@ -255,6 +255,10 @@ PrefabInstance:
       propertyPath: button
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 494572425322388121, guid: 17dd5a6e28f36044fb2abfb34071084c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.28
+      objectReference: {fileID: 0}
     - target: {fileID: 6708008883592080493, guid: 17dd5a6e28f36044fb2abfb34071084c, type: 3}
       propertyPath: m_Name
       value: ComplexPlatform1
